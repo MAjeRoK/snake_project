@@ -35,6 +35,9 @@ void SnakeUserController::update()
     case sf::Keyboard::Key::Right:
       commands_queue.push(Command::right);
     break;
+    case sf::Keyboard::Key::F:
+      commands_queue.push(Command::finish);
+    break;
   }
 }
 Command SnakeUserController::get_cmd()

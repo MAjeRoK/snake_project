@@ -135,7 +135,15 @@ void SnakeModel::update()
     }
 
     if ((next_state == State::wall) || (next_state == State::snake))
+    {
+      for (int i = 0; i < height; ++i)
+      for (int j = 0; j < width; ++j)
+      {
+        field[i][j] = State::final;
+      }
+      cout << "You Died\nYour score: " << snake.size() << endl;
       finished = true;
+    }
     else
     {
       for(auto node : snake)

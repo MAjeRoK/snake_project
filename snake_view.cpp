@@ -46,6 +46,9 @@ void SnakeView::update(vector<vector<State>> model_state)
           case State::wall:
             cell.setFillColor(sf::Color::Blue);
           break;
+          case State::final:
+            cell.setFillColor(sf::Color::Red);
+          break;
           case State::empty:
             cell.setFillColor(sf::Color::White);
           break;
